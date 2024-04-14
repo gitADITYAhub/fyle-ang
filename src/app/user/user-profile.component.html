@@ -1,0 +1,23 @@
+<div class="user-profile max-w-sm mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+    <div class="md:flex">
+        <div class="md:flex-shrink-0">
+            <img class="h-48 w-full object-cover md:w-48" [src]="user?.avatar_url" alt="{{ user?.login }}">
+        </div>
+        <div class="p-8">
+            <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{{ user?.login }}</div>
+            <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline" [href]="user?.html_url" target="_blank">{{ user?.name }}</a>
+            <p class="mt-2 text-gray-500">{{ user?.bio }}</p>
+            <div class="mt-4">
+                <span class="text-gray-600 text-sm"><i class="fas fa-map-marker-alt mr-2"></i>{{ user?.location }}</span>
+            </div>
+            <div class="flex items-center mt-4">
+                <a href="#" class="text-gray-500 hover:text-gray-700" [href]="user?.html_url" target="_blank">
+                    <i class="fab fa-github mr-2"></i>GitHub
+                </a>
+                <a href="#" class="ml-6 text-gray-500 hover:text-gray-700" [href]="'https://twitter.com/' + user?.twitter_username" target="_blank">
+                    <i class="fab fa-twitter mr-2"></i>Twitter
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

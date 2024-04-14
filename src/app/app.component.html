@@ -1,0 +1,17 @@
+
+
+<div class="font-bold text-3xl mb-10 mt-10 text-center">
+  Fyle Internship Challenge
+</div>
+<app-search-user (searchEvent)="onSearch($event)"></app-search-user>
+<div *ngIf="selectedUsername && user">
+  <div class="user-profile">
+    <app-user-profile [user]="user"></app-user-profile>
+    <app-repository-list [username]="selectedUsername ?? ''" [repositories]="repositories" [currentPage]="currentPage"
+    [pageSize]="pageSize" [totalRepos]="totalRepos" (pageChanged)="onPageChange($event)"></app-repository-list>
+  </div>
+</div>
+
+
+
+
